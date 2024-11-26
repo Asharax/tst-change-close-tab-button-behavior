@@ -30,7 +30,7 @@ async function main() {
         switch (message.type) {
         case "tab-clicked":
             if (message.closebox !== true) return
-            if (message.button !== 0 || message.metaKey !== true) return
+            if (message.button !== 0 || message.altKey !== true) return
             let tabIds = [message.tab.id]
             // すべての子孫タブを閉じる
             function loop(childrens) {
